@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg,rgb(167, 243, 248),rgb(84, 54, 250));
+    color: white;
+    text-shadow: 5px 2px 4px grey;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+body h1{
+    font-size: 2rem;
+}
+
+body h1, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    background: white;
+}
+
+form button{
+    color:rgb(84, 54, 250);
+    background-color:white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    color: white;
+    background-color: rgb(84, 54, 250);
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.todo-item,.checked-btn,.delete-btn{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: white;
+}
+.todo-item{
+    color: rgb(84, 54, 250);
+    flex: 1;
+    padding: 0rem 0.5rem;
+    
+}
+.checked-btn,.delete-btn{
+    color: rgb(84, 54, 250);
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 1rem;
+}
+.checked-btn:hover{
+    color: green;
+}
+
+.checked{
+    color: rgb(84, 54, 250);
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.checked .checked-btn{
+    color:green;
+}
+
+.fa-check-circle,.fa-trash{
+    pointer-events: none;
+}
+
+.disapear{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: rgb(84, 54, 250);
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.75rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background-color: rgb(84, 54, 250);
+    top: -5px;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background-color:rgb(205, 249, 252);
+    color: rgb(84, 54, 250);
+}
