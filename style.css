@@ -21,6 +21,7 @@ body h1, form{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 form input,form button{
@@ -29,6 +30,7 @@ form input,form button{
     border: none;
     border-radius: 10px;
     background: white;
+    outline: none;
 }
 
 form button{
@@ -140,4 +142,16 @@ select{
 .select:hover::after{
     background-color:rgb(205, 249, 252);
     color: rgb(84, 54, 250);
+}
+
+@media (max-width: 600px){
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    form .input_form input{
+        width: 40vh;
+    }
 }
